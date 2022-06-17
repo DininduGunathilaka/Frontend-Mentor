@@ -1,37 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&display=swap"
+      rel="stylesheet"
+    />
+    <!-- displays site properly based on user's device -->
+    <title>Frontend Mentor | Order summary card</title>
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Order summary card</title>
+    <style>
+      body {
+        font-family: "Red Hat Display", sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-image: url(./images/pattern-background-desktop.svg);
+        background-repeat: no-repeat;
+        align-self: center;
+      }
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        margin: 50px;
+        width: 300px;
+        border-radius: 10px;
+      }
 
-  Order Summary
+      .hero-image {
+        border-radius: 10px 10px 0 0;
+        width: 300px;
+      }
 
-  You can now listen to millions of songs, audiobooks, and podcasts on any 
-  device anywhere you like!
+      .annual-plan-container {
+        border-radius: 5px;
+        /* padding: 0 15px 0 15px; */
+        background-color: hsl(225, 100%, 98%);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
 
-  Annual Plans
-  $59.99/year
+      #b1 {
+        color: white;
+        background-color: hsl(245, 75%, 52%);
+        border-style: none;
+        border-radius: 5px;
+        margin: 10px;
+        padding: 10px 50px 10px 50px;
+        box-shadow: 50px 50px 100px rgba($color:blue, $alpha: 0.6);
+      }
 
-  Change
+      p {
+        width: 200px;
+        text-align: center;
+        font-size: 10px;
+      }
 
-  Proceed to Payment
-  Cancel Order
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .content{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: white;
+        width: 250px;
+        border-radius: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <img class="hero-image" src="./images/illustration-hero.svg" />
+      <div class="content">
+        <h3 style="font-weight: bold">Order Summary</h3>
+        <p style="text-align: center">
+          You can now listen to millions of songs, audiobooks, and podcasts on
+          any device anywhere you like!
+        </p>
+        <div class="annual-plan-container">
+          <img src="./images/icon-music.svg" />
+          <div class="annual-plan">
+            <h4>Annual Plans</h4>
+            <p>$59.99/year</p>
+          </div>
+          <h5>Change</h5>
+        </div>
+        <button id="b1">Proceed to Payment</button>
+        <button id="b2">Cancel Order</button>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
 </html>
